@@ -19,6 +19,29 @@
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Effet d'ombre */
+            opacity: 0; /* Commence invisible */
+            animation: fadeInScale 1s forwards; /* Animation */
+        }
+        @keyframes fadeInScale {
+            from {
+                transform: scale(0.8); /* Commence à 80% de la taille */
+                opacity: 0; /* Invisible au début */
+            }
+            to {
+                transform: scale(1); /* Fin à la taille normale */
+                opacity: 1; /* Devenu visible */
+            }
+        }
         h2 {
             color: #34495e;
             margin-top: 30px;
@@ -52,6 +75,11 @@
 <body>
 
     <h1>Nama Bouaké Production : Lauréat du PRIMUD 2024</h1>
+
+    <div class="image-container">
+        <img src="URL_DE_VOTRE_IMAGE" alt="Description de l'image">
+    </div>
+
     <p>Nous avons remporté le PRIMUD 2024 dans la catégorie <strong>Meilleur Promoteur Booker de la Diaspora</strong> ! Ce prix récompense notre passion pour la musique et le soutien aux artistes de la diaspora.</p>
 
     <h2><strong>Un Grand Merci à Tous Nos Partenaires et Soutiens</strong></h2>
@@ -64,17 +92,11 @@
     </ul>
 
     <h2><strong>Une Victoire Collective</strong></h2>
-    <p>À toute l’équipe de Nama Bouaké Production, cette victoire est le fruit de l’effort collectif, de la passion et de l’engagement de chacun. Chacun de vous, du management aux artistes, en passant par le staff technique et logistique, a joué un rôle clé dans ce succès.</p>
-
-    <p>Enfin, nous remercions tous les artistes qui nous ont fait confiance au fil des années. C’est grâce à vous que nous continuons à grandir et à repousser les limites de notre ambition.</p>
-
-    <p>Cette distinction ne marque pas la fin de notre aventure, mais plutôt un nouveau chapitre. Nous continuerons de travailler avec ardeur et de soutenir nos artistes avec passion, afin d’écrire ensemble de nouvelles pages de succès.</p>
-
-    <p><strong>Merci à tous pour cette magnifique reconnaissance. Ensemble, nous allons plus loin !</strong></p>
+    <p>À toute l’équipe de Nama Bouaké Production, cette victoire est le fruit de l’effort collectif, de la passion et de l’engagement de chacun...</p>
 
     <footer>
         <p><strong>Nama Bouaké Production : Toujours plus haut, toujours plus fort !</strong></p>
     </footer>
-    
+
 </body>
 </html>
