@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nama Bouaké Production - PRIMUD 2024</title>
     <style>
-        body {
+        html, body {
+            height: 100%; /* Ensure full height */
+            margin: 0;
             font-family: 'Helvetica Neue', sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
             color: #333;
         }
         h1 {
@@ -22,30 +21,14 @@
         .image-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px;
+            align-items: center; /* Center vertically */
+            height: calc(100% - 150px); /* Adjust based on header/footer height */
         }
         .image-container img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            opacity: 0;
-            animation: fadeInScale 1s forwards, flip 2s infinite; /* Added flip animation */
-        }
-        @keyframes fadeInScale {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        @keyframes flip {
-            0% { transform: perspective(600px) rotateY(0deg); }
-            50% { transform: perspective(600px) rotateY(180deg); }
-            100% { transform: perspective(600px) rotateY(0deg); }
         }
         h2 {
             color: #34495e;
@@ -68,7 +51,7 @@
             margin-bottom: 5px;
         }
         footer {
-            margin-top: 40px;
+            margin-top: auto; /* Push footer to bottom */
             border-top: 1px solid #ccc;
             padding-top: 10px;
             text-align: center;
@@ -76,15 +59,15 @@
             color: #2c3e50;
         }
         button {
-            background-color: #2980b9; /* Couleur du bouton */
-            color: white; /* Couleur du texte */
-            border: none; /* Pas de bordure */
-            padding: 10px 20px; /* Espacement interne */
-            border-radius: 5px; /* Coins arrondis */
-            cursor: pointer; /* Curseur en main */
+            background-color: #2980b9; /* Button color */
+            color: white; /* Text color */
+            border: none; /* No border */
+            padding: 10px 20px; /* Internal spacing */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor */
         }
         button:hover {
-            background-color: #3498db; /* Couleur au survol */
+            background-color: #3498db; /* Hover color */
         }
     </style>
 </head>
@@ -121,12 +104,6 @@
         // Afficher un message lorsque le bouton est cliqué
         document.getElementById('showMessageBtn').addEventListener('click', function() {
             alert("Merci à tous nos supporters ! Votre soutien nous inspire à continuer.");
-        });
-
-        // Animation pour faire apparaître l'image
-        document.addEventListener('DOMContentLoaded', function() {
-            const img = document.querySelector('.image-container img');
-            img.style.opacity = '1'; // Rendre l'image visible après le chargement
         });
     </script>
 
