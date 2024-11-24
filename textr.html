@@ -3,109 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama Bouaké Production - PRIMUD 2024</title>
+    <title>Box avec Image</title>
     <style>
-        html, body {
-            height: 100%; /* Ensure full height */
-            margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .image-container {
+        body {
             display: flex;
-            justify-content: center;
-            align-items: center; /* Center vertically */
-            height: calc(100% - 150px); /* Adjust based on header/footer height */
+            justify-content: center; /* Centre le contenu horizontalement */
+            align-items: flex-start; /* Aligne le contenu en haut */
+            height: 100vh; /* Prend toute la hauteur de la fenêtre */
+            margin: 0; /* Supprime les marges par défaut */
         }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .gratitude {
-            font-weight: bold;
-            color: #2980b9;
-        }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        footer {
-            margin-top: auto; /* Push footer to bottom */
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
-            text-align: center;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        button {
-            background-color: #2980b9; /* Button color */
-            color: white; /* Text color */
-            border: none; /* No border */
-            padding: 10px 20px; /* Internal spacing */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor */
-        }
-        button:hover {
-            background-color: #3498db; /* Hover color */
+        .box {
+            width: 400px; /* Largeur de la box */
+            height: 300px; /* Hauteur de la box */
+            background-image: url('https://backendlessappcontent.com/71FA1F11-E18C-470C-948D-95CB4CAF3268/DC63A0D4-A03D-44F4-91C0-6ABFAD5545A4/files/4ed1fac9-c730-4d09-8392-77f15a96c7f1-1024x1024.jpeg');
+            background-size: cover;
+            border-radius: 20px 20px 0 0; /* Coins arrondis uniquement en haut */
+            overflow: hidden; /* Pour éviter que l'image déborde */
+            margin: -20px auto 20px auto; /* Augmente la marge supérieure pour faire monter la box légèrement plus haut */
         }
     </style>
 </head>
 <body>
-
-    <h1>Nama Bouaké Production : Lauréat du PRIMUD 2024</h1>
-
-    <div class="image-container">
-        <img src="https://albertomah.github.io/TestGeek/IMG_20241123_212645.png" alt="Description de l'image">
-    </div>
-
-    <p>Nous avons remporté le PRIMUD 2024 dans la catégorie <strong>Meilleur Promoteur Booker de la Diaspora</strong> ! Ce prix récompense notre passion pour la musique et le soutien aux artistes de la diaspora.</p>
-
-    <h2><strong>Un Grand Merci à Tous Nos Partenaires et Soutiens</strong></h2>
-    <p class="gratitude">Cette victoire est collective et nous tenons à remercier :</p>
-    <ul>
-        <li><strong>Nos Partenaires, Sponsors, Parrains et Marraines</strong></li>
-        <li><strong>L’Équipe d’Organisation du PRIMUD</strong></li>
-        <li><strong>Les Ambassades de la France, de la Côte d’Ivoire, de la Guinée et du Mali</strong></li>
-        <li><strong>Le Ministère de la Culture de Côte d’Ivoire</strong></li>
-    </ul>
-
-    <h2><strong>Une Victoire Collective</strong></h2>
-    <p>À toute l’équipe de Nama Bouaké Production, cette victoire est le fruit de l’effort collectif, de la passion et de l’engagement de chacun...</p>
-
-    <!-- Bouton pour afficher un message -->
-    <button id="showMessageBtn">Cliquez ici pour un message spécial !</button>
-
-    <footer>
-        <p><strong>Nama Bouaké Production : Toujours plus haut, toujours plus fort !</strong></p>
-    </footer>
-
-    <script>
-        // Afficher un message lorsque le bouton est cliqué
-        document.getElementById('showMessageBtn').addEventListener('click', function() {
-            alert("Merci à tous nos supporters ! Votre soutien nous inspire à continuer.");
-        });
-    </script>
-
+    <div class="box"></div>
 </body>
 </html>
