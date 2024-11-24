@@ -8,7 +8,7 @@
         body {
             font-family: 'Helvetica Neue', sans-serif;
             background-color: #f4f4f4;
-            margin: 20px;
+            margin: 0;
             padding: 20px;
             line-height: 1.6;
             color: #333;
@@ -27,19 +27,19 @@
         .image-container img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px; /* Coins arrondis */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Effet d'ombre */
-            opacity: 0; /* Commence invisible */
-            animation: fadeInScale 1s forwards; /* Animation */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeInScale 1s forwards;
         }
         @keyframes fadeInScale {
             from {
-                transform: scale(0.8); /* Commence à 80% de la taille */
-                opacity: 0; /* Invisible au début */
+                transform: scale(0.8);
+                opacity: 0;
             }
             to {
-                transform: scale(1); /* Fin à la taille normale */
-                opacity: 1; /* Devenu visible */
+                transform: scale(1);
+                opacity: 1;
             }
         }
         h2 {
@@ -70,6 +70,17 @@
             font-weight: bold;
             color: #2c3e50;
         }
+        button {
+            background-color: #2980b9; /* Couleur du bouton */
+            color: white; /* Couleur du texte */
+            border: none; /* Pas de bordure */
+            padding: 10px 20px; /* Espacement interne */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur en main */
+        }
+        button:hover {
+            background-color: #3498db; /* Couleur au survol */
+        }
     </style>
 </head>
 <body>
@@ -77,7 +88,7 @@
     <h1>Nama Bouaké Production : Lauréat du PRIMUD 2024</h1>
 
     <div class="image-container">
-        <img src="https://backendlessappcontent.com/71FA1F11-E18C-470C-948D-95CB4CAF3268/DC63A0D4-A03D-44F4-91C0-6ABFAD5545A4/files/nb.jpeg" alt="Description de l'image">
+        <img src="https://albertomah.github.io/TestGeek/IMG_20241123_212645.png" alt="Description de l'image">
     </div>
 
     <p>Nous avons remporté le PRIMUD 2024 dans la catégorie <strong>Meilleur Promoteur Booker de la Diaspora</strong> ! Ce prix récompense notre passion pour la musique et le soutien aux artistes de la diaspora.</p>
@@ -94,9 +105,25 @@
     <h2><strong>Une Victoire Collective</strong></h2>
     <p>À toute l’équipe de Nama Bouaké Production, cette victoire est le fruit de l’effort collectif, de la passion et de l’engagement de chacun...</p>
 
+    <!-- Bouton pour afficher un message -->
+    <button id="showMessageBtn">Cliquez ici pour un message spécial !</button>
+
     <footer>
         <p><strong>Nama Bouaké Production : Toujours plus haut, toujours plus fort !</strong></p>
     </footer>
+
+    <script>
+        // Afficher un message lorsque le bouton est cliqué
+        document.getElementById('showMessageBtn').addEventListener('click', function() {
+            alert("Merci à tous nos supporters ! Votre soutien nous inspire à continuer.");
+        });
+
+        // Animation pour faire apparaître l'image
+        document.addEventListener('DOMContentLoaded', function() {
+            const img = document.querySelector('.image-container img');
+            img.style.opacity = '1'; // Rendre l'image visible après le chargement
+        });
+    </script>
 
 </body>
 </html>
