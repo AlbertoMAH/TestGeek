@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box avec Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Centre le contenu horizontalement */
+            align-items: flex-start; /* Aligne le contenu en haut */
+            height: 100vh; /* Prend toute la hauteur de la fenêtre */
+            margin: 0; /* Supprime les marges par défaut */
+        }
+        .box {
+            width: 400px; /* Largeur de la box */
+            height: 300px; /* Hauteur de la box */
+            background-image: url('https://backendlessappcontent.com/71FA1F11-E18C-470C-948D-95CB4CAF3268/DC63A0D4-A03D-44F4-91C0-6ABFAD5545A4/files/4ed1fac9-c730-4d09-8392-77f15a96c7f1-1024x1024.jpeg');
+            background-size: cover;
+            border-radius: 20px 20px 0 0; /* Coins arrondis uniquement en haut */
+            overflow: hidden; /* Pour éviter que l'image déborde */
+            margin: -20px auto 20px auto; /* Augmente la marge supérieure pour faire monter la box légèrement plus haut */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
