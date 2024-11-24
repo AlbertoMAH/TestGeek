@@ -30,7 +30,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             opacity: 0;
-            animation: fadeInScale 1s forwards;
+            animation: fadeInScale 1s forwards, flip 2s infinite; /* Added flip animation */
         }
         @keyframes fadeInScale {
             from {
@@ -41,6 +41,11 @@
                 transform: scale(1);
                 opacity: 1;
             }
+        }
+        @keyframes flip {
+            0% { transform: perspective(600px) rotateY(0deg); }
+            50% { transform: perspective(600px) rotateY(180deg); }
+            100% { transform: perspective(600px) rotateY(0deg); }
         }
         h2 {
             color: #34495e;
